@@ -80,13 +80,13 @@ UIView+MJExtension.h        UIView+MJExtension.m
 ## <a id="下拉刷新01-默认"></a>Header Refresh 01 - Default【下拉刷新01-默认】
 ```objc
 self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-   // 进入刷新状态后会自动调用这个block
+   // Call the block when go into the refreshing state【进入刷新状态后会自动调用这个block】
 }];
 或
-// 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+// Set call back【设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）】
 self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
 
-// 马上进入刷新状态
+// Directly go into the refreshing mode【马上进入刷新状态】
 [self.tableView.header beginRefreshing];
 ```
 ![(下拉刷新01-普通)](http://images0.cnblogs.com/blog2015/497279/201506/141204343486151.gif)
