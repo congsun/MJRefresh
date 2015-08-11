@@ -31,7 +31,7 @@
     * [UIWebView01- Header Refresh【UIWebView01-下拉刷新】](#UIWebView01-下拉刷新)
 * [期待](#期待)
 
-## <a id="支持哪些控件的刷新"></a>支持哪些控件的刷新
+## <a id="支持哪些控件的刷新"></a>What are supported【支持哪些控件的刷新】
 * `UIScrollView`、`UITableView`、`UICollectionView`、`UIWebView`
 
 ## <a id="如何使用MJRefresh"></a>如何使用MJRefresh
