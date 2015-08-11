@@ -77,7 +77,7 @@ UIView+MJExtension.h        UIView+MJExtension.m
 ```
 <img src="http://images0.cnblogs.com/blog2015/497279/201506/141345470048120.png" width="30%" height="30%">
 
-## <a id="下拉刷新01-默认"></a>下拉刷新01-默认
+## <a id="下拉刷新01-默认"></a>Header Refresh 01 - Default【下拉刷新01-默认】
 ```objc
 self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
    // 进入刷新状态后会自动调用这个block
@@ -91,7 +91,7 @@ self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self r
 ```
 ![(下拉刷新01-普通)](http://images0.cnblogs.com/blog2015/497279/201506/141204343486151.gif)
 
-## <a id="下拉刷新02-动画图片"></a>下拉刷新02-动画图片
+## <a id="下拉刷新02-动画图片"></a>Header Refresh 02 - With GIF【下拉刷新02-动画图片】
 ```objc
 // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
 MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
@@ -106,24 +106,24 @@ self.tableView.header = header;
 ```
 ![(下拉刷新02-动画图片)](http://images0.cnblogs.com/blog2015/497279/201506/141204402238389.gif)
 
-## <a id="下拉刷新03-隐藏时间"></a>下拉刷新03-隐藏时间
+## <a id="下拉刷新03-隐藏时间"></a>Header Refresh 03 - Hide Update Time【下拉刷新03-隐藏时间】
 ```objc
-// 隐藏时间
+// Hide Time【隐藏时间】
 header.lastUpdatedTimeLabel.hidden = YES;
 ```
 ![(下拉刷新03-隐藏时间)](http://images0.cnblogs.com/blog2015/497279/201506/141204456132944.gif)
 
-## <a id="下拉刷新04-隐藏状态和时间"></a>下拉刷新04-隐藏状态和时间
+## <a id="下拉刷新04-隐藏状态和时间"></a>Header Refresh 04 - Hide Refreshing Text and Time【下拉刷新04-隐藏状态和时间】
 ```objc
-// 隐藏时间
+// Hide Time【隐藏时间】
 header.lastUpdatedTimeLabel.hidden = YES;
 
-// 隐藏状态
+// Hide State【隐藏状态】
 header.stateLabel.hidden = YES;
 ```
 ![(下拉刷新04-隐藏状态和时间0)](http://images0.cnblogs.com/blog2015/497279/201506/141204508639539.gif)
 
-## <a id="下拉刷新05-自定义文字"></a>下拉刷新05-自定义文字
+## <a id="下拉刷新05-自定义文字"></a>Header Refresh 05 - Customize Refreshing Text【下拉刷新05-自定义文字】
 ```objc
 // 设置文字
 [header setTitle:@"Pull down to refresh" forState:MJRefreshStateIdle];
@@ -140,14 +140,14 @@ header.lastUpdatedTimeLabel.textColor = [UIColor blueColor];
 ```
 ![(下拉刷新05-自定义文字)](http://images0.cnblogs.com/blog2015/497279/201506/141204563633593.gif)
 
-## <a id="下拉刷新06-自定义刷新控件"></a>下拉刷新06-自定义刷新控件
+## <a id="下拉刷新06-自定义刷新控件"></a>Header Refresh 06 - Customize Refreshing Header【下拉刷新06-自定义刷新控件】
 ```objc
 self.tableView.header = [MJDIYHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
 // 具体实现参考MJDIYHeader.h和MJDIYHeader.m
 ```
 ![(下拉刷新06-自定义刷新控件)](http://images0.cnblogs.com/blog2015/497279/201506/141205019261159.gif)
 
-## <a id="上拉刷新01-默认"></a>上拉刷新01-默认
+## <a id="上拉刷新01-默认"></a>Footer Refresh 01 - Default【上拉刷新01-默认】
 ```objc
 self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
    // 进入刷新状态后会自动调用这个block
@@ -158,7 +158,7 @@ self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:se
 ```
 ![(上拉刷新01-默认)](http://images0.cnblogs.com/blog2015/497279/201506/141205090047696.gif)
 
-## <a id="上拉刷新02-动画图片"></a>上拉刷新02-动画图片
+## <a id="上拉刷新02-动画图片"></a>Footer Refresh 02 - With GIF【上拉刷新02-动画图片】
 ```objc
 // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadMoreData方法）
 MJRefreshAutoGifFooter *footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
@@ -171,7 +171,7 @@ self.tableView.footer = footer;
 ```
 ![(上拉刷新02-动画图片)](http://images0.cnblogs.com/blog2015/497279/201506/141205141445793.gif)
 
-## <a id="上拉刷新03-隐藏刷新状态的文字"></a>上拉刷新03-隐藏刷新状态的文字
+## <a id="上拉刷新03-隐藏刷新状态的文字"></a>Footer Refresh 03 - Customize Refreshing Text【上拉刷新03-隐藏刷新状态的文字】
 ```objc
 // 隐藏刷新状态的文字
 footer.refreshingTitleHidden = YES;
@@ -179,14 +179,14 @@ footer.refreshingTitleHidden = YES;
 ```
 ![(上拉刷新03-隐藏刷新状态的文字)](http://images0.cnblogs.com/blog2015/497279/201506/141205200985774.gif)
 
-## <a id="上拉刷新04-全部加载完毕"></a>上拉刷新04-全部加载完毕
+## <a id="上拉刷新04-全部加载完毕"></a>Footer Refresh 04 - Display "Load Complete"【上拉刷新04-全部加载完毕】
 ```objc
 // 变为没有更多数据的状态
 [footer noticeNoMoreData];
 ```
 ![(上拉刷新04-全部加载完毕)](http://images0.cnblogs.com/blog2015/497279/201506/141205248634686.gif)
 
-## <a id="上拉刷新05-自定义文字"></a>上拉刷新05-自定义文字
+## <a id="上拉刷新05-自定义文字"></a>Footer Refresh 05 - Customize Refreshing Text【上拉刷新05-自定义文字】
 ```objc
 // 设置文字
 [footer setTitle:@"Click or drag up to refresh" forState:MJRefreshStateIdle];
@@ -201,20 +201,20 @@ footer.stateLabel.textColor = [UIColor blueColor];
 ```
 ![(上拉刷新05-自定义文字)](http://images0.cnblogs.com/blog2015/497279/201506/141205295511153.gif)
 
-## <a id="上拉刷新06-加载后隐藏"></a>上拉刷新06-加载后隐藏
+## <a id="上拉刷新06-加载后隐藏"></a>Footer Refresh 06 - Hide After Finish Refresh【上拉刷新06-加载后隐藏】
 ```objc
 // 隐藏当前的上拉刷新控件
 self.tableView.footer.hidden = YES;
 ```
 ![(上拉刷新06-加载后隐藏)](http://images0.cnblogs.com/blog2015/497279/201506/141205343481821.gif)
 
-## <a id="上拉刷新07-自动回弹的上拉01"></a>上拉刷新07-自动回弹的上拉01
+## <a id="上拉刷新07-自动回弹的上拉01"></a>Footer Refresh 07 - Bouncing Refresh01【上拉刷新07-自动回弹的上拉01】
 ```objc
 self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 ```
 ![(上拉刷新07-自动回弹的上拉01)](http://images0.cnblogs.com/blog2015/497279/201506/141205392239231.gif)
 
-## <a id="上拉刷新08-自动回弹的上拉02"></a>上拉刷新08-自动回弹的上拉02
+## <a id="上拉刷新08-自动回弹的上拉02"></a>Footer Refresh 08 - Bouncing Refresh02【上拉刷新08-自动回弹的上拉02】
 ```objc
 MJRefreshBackGifFooter *footer = [MJRefreshBackGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 
@@ -230,21 +230,21 @@ self.tableView.footer = footer;
 ```
 ![(上拉刷新07-自动回弹的上拉02)](http://images0.cnblogs.com/blog2015/497279/201506/141205441443628.gif)
 
-## <a id="上拉刷新09-自定义刷新控件(自动刷新)"></a>上拉刷新09-自定义刷新控件(自动刷新)
+## <a id="上拉刷新09-自定义刷新控件(自动刷新)"></a>Footer Refresh 09 - Customize Refreshing Footer(Release To Refresh)【上拉刷新09-自定义刷新控件(自动刷新)】
 ```objc
 self.tableView.footer = [MJDIYAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 // 具体实现参考MJDIYAutoFooter.h和MJDIYAutoFooter.m
 ```
 ![(上拉刷新09-自定义刷新控件(自动刷新))](http://images0.cnblogs.com/blog2015/497279/201506/141205500195866.gif)
 
-## <a id="上拉刷新10-自定义刷新控件(自动回弹)"></a>上拉刷新10-自定义刷新控件(自动回弹)
+## <a id="上拉刷新10-自定义刷新控件(自动回弹)"></a>Footer Refresh 10 - Customize Refreshing Footer(Bouncing Refresh)【上拉刷新10-自定义刷新控件(自动回弹)】
 ```objc
 self.tableView.footer = [MJDIYBackFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 // 具体实现参考MJDIYBackFooter.h和MJDIYBackFooter.m
 ```
 ![(上拉刷新10-自定义刷新控件(自动回弹))](http://images0.cnblogs.com/blog2015/497279/201506/141205560666819.gif)
 
-## <a id="UICollectionView01-上下拉刷新"></a>UICollectionView01-上下拉刷新
+## <a id="UICollectionView01-上下拉刷新"></a>UICollectionView01-Refresh on Header and Footer【UICollectionView01-上下拉刷新】
 ```objc
 // 下拉刷新
 self.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -258,7 +258,7 @@ self.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBloc
 ```
 ![(UICollectionView01-上下拉刷新)](http://images0.cnblogs.com/blog2015/497279/201506/141206021603758.gif)
 
-## <a id="UIWebView01-下拉刷新"></a>UIWebView01-下拉刷新
+## <a id="UIWebView01-下拉刷新"></a>UIWebView01- Header Refresh【UIWebView01-下拉刷新】
 ```objc
 // 添加下拉刷新控件
 self.webView.scrollView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
