@@ -34,8 +34,8 @@
 ## <a id="支持哪些控件的刷新"></a>What are supported【支持哪些控件的刷新】
 * `UIScrollView`、`UITableView`、`UICollectionView`、`UIWebView`
 
-## <a id="如何使用MJRefresh"></a>如何使用MJRefresh
-* cocoapods导入：`pod 'MJRefresh'`
+## <a id="如何使用MJRefresh"></a>How to use MJRefresh如何使用MJRefresh】
+* cocoapods：`pod 'MJRefresh'`
 * 手动导入：
     * 将`MJRefresh`文件夹中的所有文件拽入项目中
     * 导入主头文件：`#import "MJRefresh.h"`
@@ -49,11 +49,11 @@ UIScrollView+MJRefresh.h    UIScrollView+MJRefresh.m
 UIView+MJExtension.h        UIView+MJExtension.m
 ```
 
-## <a id="已经超过上百个App正在使用MJRefresh"></a>已经超过上百个App正在使用MJRefresh
+## <a id="已经超过上百个App正在使用MJRefresh"></a>There are more than 100 apps are using MJRefresh【已经超过上百个App正在使用MJRefresh】
 <img src="http://images0.cnblogs.com/blog2015/497279/201506/141212365041650.png" width="200" height="300">
 * 更多App信息可以关注：[M了个J-博客园](http://www.cnblogs.com/mjios/p/4409853.html)
 
-## <a id="MJRefresh类结构图"></a>MJRefresh类结构图
+## <a id="MJRefresh类结构图"></a>MJRefresh Class Diagram【MJRefresh类结构图】
 ![](http://images0.cnblogs.com/blog2015/497279/201506/132232456139177.png)
 - 图中`红色文字的类`：可以直接拿来用
     - 下拉刷新控件的种类
